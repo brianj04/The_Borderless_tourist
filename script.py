@@ -6,8 +6,9 @@ def get_desination_index(Destination):
 
 
 def get_traveler_location(traveler):
-    traveler_destination = destinations
-    traveler_desination_index = get_desination_index(traveler_destination)
-    return traveler_desination_index
+    traveler_destination = traveler[1]
+    traveler_destination_index = get_desination_index(traveler_destination)
+    return traveler_destination_index
 test_destination_index = get_traveler_location(test_traveler)
 print(test_destination_index)
+

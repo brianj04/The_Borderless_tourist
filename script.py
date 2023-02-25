@@ -29,3 +29,15 @@ add_attraction("Sao Paulo, Brazil", ["Pátio do Colégio", ["historical site"]])
 add_attraction("Cairo, Egypt", ["Pyramids of Giza", ["monument", "historical site"]])
 add_attraction("Cairo, Egypt", ["Egyptian Museum", ["museum"]])
 print(attractions)
+
+def find_attractions(destination, interests):
+    destination_index = get_desination_index(destination)
+    attractions_in_city = destination_index[1]
+    attractions_with_interest = []
+    possible_attraction = [[] for x in attractions_in_city]
+    for item in possible_attraction:
+        attraction_tags = item[1]
+        for attraction in attraction_tags:
+            for interest in interests:
+                if interest in attraction_tags:
+                    
